@@ -19,7 +19,7 @@ imageModel.find(function(err, images) {
         	function(viewModel) {    
         		 recentCommentsModel(viewModel, 
                     function(viewModel) {     
-                        res.render('index',viewModel); 
+                        res.render('index',{"viewModel":viewModel,userName: req.user ? req.user.username : ''}); 
                     });   
         	});
 
@@ -31,7 +31,7 @@ imageModel.find(function(err, images) {
 
         comments(viewModel,
         	function(viewModel){
-        		res.render('index',{"comments":comments,userName: req.user ? req.user.username : ''});
+        		res.render('index',{"comments":comments,});
         		//res.render('index',viewModel);
 
         	});        
