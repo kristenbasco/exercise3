@@ -33,12 +33,6 @@ module.exports = function(viewModel, callback) {
 
 
 
-
-
-
-
-
-
     , function(err, results){
 //here we add the stats to our viewModel in the box for all of our sidebar data. Note how we tally each result from the four functions above, and this final function won’t run without all the results.
         viewModel.sidebar.recentCommentsModel = {

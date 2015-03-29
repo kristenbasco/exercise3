@@ -3,14 +3,19 @@ var imageModel = require('../models').Image;
 var stats = require('../helpers/stats');
 var recentCommentsModel = require('../helpers/recent');
 var comments = require('../models').Comment;
+var Models = require('../models');
 
 module.exports = {
 	index: function(req, res) {
 		var viewModel = {    
-			images: {},    
-			sidebar: {},
-            recentComments: {}
+			images: Models.Images, 
+            comments: Models.Comments, 
+            sidebar: {},
+            recentComments: {}, 
+			userName: req.user ? req.user.username : '',
 			};
+
+
 
 
 imageModel.find(function(err, images) {
@@ -19,7 +24,7 @@ imageModel.find(function(err, images) {
         	function(viewModel) {    
         		 recentCommentsModel(viewModel, 
                     function(viewModel) {     
-                        res.render('index',{"viewModel":viewModel,userName: req.user ? req.user.username : ''}); 
+                        res.render('index',viewModel); 
                     });   
         	});
 
