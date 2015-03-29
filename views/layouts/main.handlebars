@@ -9,9 +9,47 @@
     <body>
         <div class="page-header">
             <div class="container">
-                <div class="col-md-6">
-                    <h1><a href="/">Unflickr</a></h1>
-                </div>
+                <div class="row">
+                    
+                    <div class="col-md-6">
+                        <h1><a href="/">Unflickr</a></h1>
+                    </div>
+           
+
+        <div id="navbar" class="navbar-collapse collapse">
+            {{#if userName}}
+                
+             
+                    <ul class="nav push-down  navbar-nav navbar-right">
+                        <p style="color:white;" class="navbar-text ">
+                            <strong>Hello,</strong> {{userName}}
+                        </p>
+                        <li>
+                            <a href="/signout">Log Out</a>
+                        </li>
+            {{else}}
+                   
+                    <ul class="nav push-down navbar-nav navbar-right">
+
+                        <li><a href="/signup">Sign Up</a></li>
+                        <li><a href="/signin">Sign In</a></li>
+            {{/if}}
+                    </ul>
+           
+
+
+
+        </div><!--/.navbar-collapse -->
+
+
+
+               
+         
+
+
+
+
+              </div><!--row-->
             </div>
         </div>
         <div class="container">

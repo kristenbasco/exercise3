@@ -18,29 +18,29 @@ module.exports = {
 
 
 
-imageModel.find(function(err, images) {
-        viewModel.images = images;    
-        stats(viewModel, 
-        	function(viewModel) {    
-        		 recentCommentsModel(viewModel, 
-                    function(viewModel) {     
-                        res.render('index',viewModel); 
-                    });   
-        	});
+    imageModel.find(function(err, images) {
+            viewModel.images = images;    
+            stats(viewModel, 
+            	function(viewModel) {    
+            		 recentCommentsModel(viewModel, 
+                        function(viewModel) {     
+                            res.render('index',viewModel); 
+                        });   
+            	});
 
-        /*//viewModel.images = images;    
-        recentCommentsModel(viewModel, 
-            function(viewModel) {     
-                res.render('index',viewModel);    
-        });*/
+            /*//viewModel.images = images;    
+            recentCommentsModel(viewModel, 
+                function(viewModel) {     
+                    res.render('index',viewModel);    
+            });*/
 
-        comments(viewModel,
-        	function(viewModel){
-        		res.render('index',{"comments":comments,});
-        		//res.render('index',viewModel);
+            comments(viewModel,
+            	function(viewModel){
+            		res.render('index',{"comments":comments,});
+            		//res.render('index',viewModel);
 
-        	});        
-    	}); //end of imageModel
-	//	res.render('index',viewModel);
+            	});        
+        	}); //end of imageModel
+    	//	res.render('index',viewModel);
 	}
 }; //end of module.exports

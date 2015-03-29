@@ -89,6 +89,28 @@ a:hover{
 	font-weight: 600;
 
 }
+
+.button-right{
+	margin-left: 1em; 
+	padding-top: 10px;
+	float:right!important;
+}
+
+.box{
+	margin-top: 10px;
+}
+
+.push-down{
+	margin-top: 10px!important;
+}
+form {
+	color: #5d5d5d;
+	background: #f2f2f2;
+	padding: 26px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
 /*.footer{
 	background-color: #4c4f4f;
 	padding: 20px;
