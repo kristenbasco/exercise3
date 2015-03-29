@@ -1,7 +1,7 @@
 {
   "name": "Unflickr",
-  "version": "1.0.0",
-  "description": "Project for DIG4530",
+  "version": "1.1.0",
+  "description": "Exercise 3",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
